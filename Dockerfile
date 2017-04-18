@@ -1,8 +1,12 @@
-FROM debian:latest
+FROM golang:latest
 MAINTAINER Kengo Suzuki <kengoscal@gmail.coim>
 
-RUN apt-get update && \
-apt-get upgrade -y && \
-apt-get install --no-install-recommends -y \
-    build-essential && \
-apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN go get github.com/gophish/gophish
+WORKDIR $GOPATH/src/github.com/gophish/gophish
+RUN go build
+
+EXPOSE 3333
+CMD ["./gophish"]
+
+#RUN go build -o main .
+#CMD ["/app/main"]
