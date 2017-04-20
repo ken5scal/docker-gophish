@@ -1,3 +1,4 @@
 # Ignore
 /Terraform/account.json
 /Terraform/*.tfstate
+/Terraform/terraform.tfvars
