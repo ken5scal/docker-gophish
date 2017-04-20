@@ -1,2 +1,4 @@
 # Ignore
 *.json
+/Terraform/account.json
+/Terraform/*.tfstate
