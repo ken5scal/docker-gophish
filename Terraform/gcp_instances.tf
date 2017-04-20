@@ -8,6 +8,11 @@ resource "google_compute_instance" "default" {
         image = "debian-cloud/debian-8"
     }
 
+    disk {
+        type    = "local-ssd"
+        scratch = true
+    }
+
     network_interface {
         network = "default"
     }
