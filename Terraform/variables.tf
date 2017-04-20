@@ -1,6 +1,6 @@
 variable "project_id" {}
 variable "billing_id" {}
 variable "org_id" {}
-varibale "region" {
+variable "region" {
     default = "asia-northeast"
 }
