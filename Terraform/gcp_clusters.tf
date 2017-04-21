@@ -1,7 +1,7 @@
 resource "google_container_cluster" "primary" {
     name    = "gophish-cluster"
     zone    = "${var.zone}"
-    initial_node_count = 3
+    initial_node_count = 1
 
     additional_zones = [
         "asia-northeast1-b",
