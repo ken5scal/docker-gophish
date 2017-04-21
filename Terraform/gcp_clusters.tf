@@ -8,6 +8,12 @@ resource "google_container_cluster" "primary" {
         "asia-northeast1-c",
     ]
 
+    master_auth {
+        // TODO: Change Later
+        username = "hoge.hoge"
+        password = "fuga.fuga"
+    }
+
     node_config {
         oauth_scopes = [
         "https://www.googleapis.com/auth/compute",
